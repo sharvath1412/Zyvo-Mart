@@ -12,7 +12,13 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: 'comic sans ms';
+  font-family: 'comic sans ms', cursive, sans-serif;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 @keyframes float {
