@@ -1,6 +1,6 @@
 import mongoose from 'mongoose'
 
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/zuvomart'
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/zyvomart'
 
 let cached = (global as any).mongoose
 
@@ -16,6 +16,8 @@ async function dbConnect() {
   if (!cached.promise) {
     const opts = {
       bufferCommands: false,
+      serverSelectionTimeoutMS: 10000,
+      connectTimeoutMS: 10000,
     }
 
     cached.promise = mongoose.connect(MONGODB_URI, opts).then((mongoose) => {

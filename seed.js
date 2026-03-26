@@ -101,7 +101,7 @@ const products = [
 
 async function seed() {
   try {
-    await mongoose.connect(process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/zuvomart")
+    await mongoose.connect(process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/zyvomart")
     console.log("✅ Connected to MongoDB")
 
     const adminExists = await User.findOne({ email: "admin@zuvomart.com" })
